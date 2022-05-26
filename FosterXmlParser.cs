@@ -313,7 +313,6 @@ namespace LibFoster.Modules
 
                     case "dep":
                     case "dependency":
-                        Foster_Dependency dep = new Foster_Dependency();
                         if (node.Attributes["Url"] == null)
                         {
                             throw new System.Exception("The dependency node does not have the URL attribute.");
