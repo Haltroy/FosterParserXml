@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+	  <DebugType>embedded</DebugType>
 	  <VersionPrefix>1.0.1</VersionPrefix>
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -26,9 +27,9 @@
     <Content Include="logo.ico" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Foster\Foster.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Foster" Version="2.0.0.1" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Update="logo.png">
