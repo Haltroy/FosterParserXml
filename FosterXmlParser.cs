@@ -154,7 +154,7 @@ namespace LibFoster.Modules
                             Foster_Dependency dep = new Foster_Dependency();
                             if (node.Attributes["Name"] == null)
                             {
-                                throw new System.Exception("The dependency node does not have the name attribute in verison \"" + version.ID + "\".");
+                                throw new System.Exception("The dependency node does not have the name attribute in version \"" + version.ID + "\".");
                             }
                             if (node.Attributes["Version"] == null)
                             {
@@ -324,6 +324,7 @@ namespace LibFoster.Modules
                         var _dep = new Foster(node.Attributes["Url"].Value, foster) { IsSkeleton = foster.IsSkeleton };
                         if (!foster.IsSkeleton) { _dep.LoadUrlSync(); }
                         _dep.Name = node.Attributes["Name"].Value;
+                        foster.Dependencies.Add(_dep);
                         break;
 
                     case "name":

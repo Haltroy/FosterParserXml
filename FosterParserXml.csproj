@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <VersionPrefix>1.0</VersionPrefix>
+	  <VersionPrefix>1.0.1</VersionPrefix>
     <TargetFramework>netstandard2.0</TargetFramework>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Description>XML Parser support for Foster.</Description>
@@ -13,13 +13,28 @@
 	  <PackageTags>foster parser xml haltroy htupdate</PackageTags>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	  <Authors>haltroy</Authors>
+	  <PackageIcon>logo.png</PackageIcon>
+	  <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Foster\Foster.csproj" />
   </ItemGroup>
 
 	<ItemGroup>
+		<None Update="logo.png">
+		  <PackagePath>\</PackagePath>
+		  <Pack>True</Pack>
+		</None>
 		<None Update="README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
